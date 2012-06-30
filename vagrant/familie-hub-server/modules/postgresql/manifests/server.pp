@@ -32,4 +32,14 @@ class postgresql::server (
     notify  => Service["postgresql-system-$version"],
   }
 
+  file { "postgresql-pg_hba-config-$version":
+    name    => "/etc/postgresql/$version/main/pg_hba.conf",
+    ensure  => present,
+    content => template('postgresql/pg_hba.conf'),
+    owner   => 'postgres',
+    group   => 'postgres',
+    mode    => '0644',
+    require => Package["postgresql-server-$version"],
+    notify  => Service["postgresql-system-$version"],
+  }
 }
