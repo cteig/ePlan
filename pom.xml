@@ -9,9 +9,9 @@
     <name>quickstart</name>
     <description></description>
     <!--
-     TODO <organization> <name>company name</name> <url>company url</url>
-     </organization>
-   -->
+      TODO <organization> <name>company name</name> <url>company url</url>
+      </organization>
+    -->
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -31,12 +31,12 @@
             <version>${wicket.version}</version>
         </dependency>
         <!-- OPTIONAL DEPENDENCY
-      <dependency>
-        <groupId>org.apache.wicket</groupId>
-        <artifactId>wicket-extensions</artifactId>
-        <version>${wicket.version}</version>
-      </dependency>
-      -->
+        <dependency>
+          <groupId>org.apache.wicket</groupId>
+          <artifactId>wicket-extensions</artifactId>
+          <version>${wicket.version}</version>
+        </dependency>
+        -->
 
         <!-- LOGGING DEPENDENCIES - LOG4J -->
         <dependency>
@@ -55,6 +55,12 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>2.24.1</version>
             <scope>test</scope>
         </dependency>
 
