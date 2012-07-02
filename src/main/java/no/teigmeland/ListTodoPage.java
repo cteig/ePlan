@@ -6,15 +6,18 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class ListTodoPage extends WebPage {
 
+    public TodoTjeneste todoTjeneste;
+
     public ListTodoPage(PageParameters parameters) {
         super(parameters);
 
-        add(createTodoListView(Arrays.asList("todo 1", "todo 2", "todo3")));
+        todoTjeneste = WicketApplication.get().getTodoTjeneste();
+
+        add(createTodoListView(todoTjeneste.hentTodoListe()));
     }
 
     private ListView createTodoListView(final List<String> todoListe) {
