@@ -1,11 +1,14 @@
 package no.teigmeland;
 
-import junit.framework.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+import java.util.List;
+
+import static junit.framework.Assert.assertEquals;
 
 public class ListTodoTest {
 
@@ -17,9 +20,8 @@ public class ListTodoTest {
         driver.get("http://localhost:8080/todo/list");
 
         // Find the text input element by its name
-        WebElement element = driver.findElement(By.id("test-todo"));
+        List<WebElement> elements = driver.findElements(By.tagName("li"));
 
-        Assert.assertNotNull(element);
-
+        assertEquals(3, elements.size());
     }
 }
