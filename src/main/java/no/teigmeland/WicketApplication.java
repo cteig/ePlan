@@ -29,5 +29,6 @@ public class WicketApplication extends WebApplication
 		// add your configuration here
 
         mountPage("todo/list", ListTodoPage.class);
-	}
+        mountPage("todo/leggtil", LeggTilTodoPage.class);
+    }
 }
