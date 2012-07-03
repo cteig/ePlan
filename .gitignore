@@ -1,4 +1,5 @@
 vagrant/familie-hub-server/.project
 vagrant/familie-hub-server/.vagrant
+target/
 .idea/
 *.iml
