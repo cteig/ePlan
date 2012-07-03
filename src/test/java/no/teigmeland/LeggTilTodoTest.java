@@ -10,7 +10,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 public class LeggTilTodoTest {
 
     @Test
-    public void listTodo() throws Exception {
+    public void leggTilToDo() throws Exception {
         WebDriver driver = new HtmlUnitDriver();
 
         // And now use this to visit Google
