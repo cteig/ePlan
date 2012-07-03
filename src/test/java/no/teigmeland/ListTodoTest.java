@@ -22,6 +22,6 @@ public class ListTodoTest {
         // Find the text input element by its name
         List<WebElement> elements = driver.findElements(By.tagName("li"));
 
-        assertEquals(3, elements.size());
+        assertEquals(1, elements.size());
     }
 }

@@ -2,6 +2,7 @@ package no.teigmeland;
 
 public class Oppgave {
     private int id;
+
     private String kortBeskrivelse;
     private String langBeskrivelse;
 
@@ -12,4 +13,9 @@ public class Oppgave {
         this.kortBeskrivelse = kortBeskrivelse;
         this.langBeskrivelse = langBeskrivelse;
     }
+
+    public String getKortBeskrivelse() {
+        return kortBeskrivelse;
+    }
+
 }

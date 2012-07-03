@@ -1,10 +1,18 @@
 package no.teigmeland;
 
+import org.springframework.jdbc.datasource.SingleConnectionDataSource;
+
+import javax.sql.DataSource;
 import java.util.Arrays;
 import java.util.List;
 
 public class TodoTjeneste {
-    List<String> hentTodoListe() {
-        return Arrays.asList("todo 1", "todo 2", "todo3");
+
+    DataSource source = new SingleConnectionDataSource(
+            "jdbc:postgresql://localhost/familiehub",
+            "familiehub", "hemmelig", true);
+    OppgaveDAO oppgaveDAO = new OppgaveDAO(source);
+    List<Oppgave> hentTodoListe() {
+        return oppgaveDAO.hentAlleOppgaver();
     }
 }
