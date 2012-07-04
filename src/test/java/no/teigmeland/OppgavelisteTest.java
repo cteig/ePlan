@@ -10,10 +10,10 @@ import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 
-public class ListTodoTest {
+public class OppgavelisteTest {
 
     @Test
-    public void listTodo() throws Exception {
+    public void visOppgaveliste() throws Exception {
         WebDriver driver = new HtmlUnitDriver();
 
         // And now use this to visit Google
