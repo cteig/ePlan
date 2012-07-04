@@ -2,7 +2,7 @@ package no.teigmeland.familiehub.wicket;
 
 import no.teigmeland.familiehub.tjeneste.oppgaveliste.OppgavelisteTjeneste;
 import no.teigmeland.familiehub.wicket.page.oppgaveliste.HomePage;
-import no.teigmeland.familiehub.wicket.page.oppgaveliste.LeggTilTodoPage;
+import no.teigmeland.familiehub.wicket.page.oppgaveliste.LeggTilOppgavePage;
 import no.teigmeland.familiehub.wicket.page.oppgaveliste.ListTodoPage;
 import org.apache.wicket.protocol.http.WebApplication;
 
@@ -31,7 +31,7 @@ public class WicketApplication extends WebApplication {
         // add your configuration here
 
         mountPage("todo/list", ListTodoPage.class);
-        mountPage("todo/leggtil", LeggTilTodoPage.class);
+        mountPage("todo/leggtil", LeggTilOppgavePage.class);
 
         oppgavelisteTjeneste = new OppgavelisteTjeneste();
     }
