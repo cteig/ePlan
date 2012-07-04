@@ -1,3 +1,4 @@
+<!DOCTYPE dataset SYSTEM "../../../../../oppgaveliste.dtd">
 <dataset>
     <oppgave id="1" kort_beskrivelse="fisk" lang_beskrivelse="torsk"/>
 </dataset>
