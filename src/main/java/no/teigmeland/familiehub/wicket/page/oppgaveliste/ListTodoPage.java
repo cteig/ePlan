@@ -1,5 +1,8 @@
-package no.teigmeland;
+package no.teigmeland.familiehub.wicket.page.oppgaveliste;
 
+import no.teigmeland.familiehub.domene.oppgaveliste.Oppgave;
+import no.teigmeland.familiehub.tjeneste.oppgaveliste.TodoTjeneste;
+import no.teigmeland.familiehub.wicket.WicketApplication;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;

@@ -1,9 +1,10 @@
-package no.teigmeland;
+package no.teigmeland.familiehub.tjeneste.oppgaveliste;
 
+import no.teigmeland.familiehub.domene.oppgaveliste.Oppgave;
+import no.teigmeland.familiehub.dao.oppgaveliste.OppgaveDAO;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
 import javax.sql.DataSource;
-import java.util.Arrays;
 import java.util.List;
 
 public class TodoTjeneste {
@@ -12,7 +13,8 @@ public class TodoTjeneste {
             "jdbc:postgresql://localhost/familiehub",
             "familiehub", "hemmelig", true);
     OppgaveDAO oppgaveDAO = new OppgaveDAO(source);
-    List<Oppgave> hentTodoListe() {
+
+    public List<Oppgave> hentTodoListe() {
         return oppgaveDAO.hentAlleOppgaver();
     }
 }

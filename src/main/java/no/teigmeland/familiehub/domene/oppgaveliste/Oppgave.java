@@ -1,4 +1,4 @@
-package no.teigmeland;
+package no.teigmeland.familiehub.domene.oppgaveliste;
 
 public class Oppgave {
     private int id;

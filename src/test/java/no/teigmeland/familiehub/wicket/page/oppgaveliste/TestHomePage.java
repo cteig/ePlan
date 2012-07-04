@@ -1,5 +1,6 @@
-package no.teigmeland;
+package no.teigmeland.familiehub.wicket.page.oppgaveliste;
 
+import no.teigmeland.familiehub.wicket.WicketApplication;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;

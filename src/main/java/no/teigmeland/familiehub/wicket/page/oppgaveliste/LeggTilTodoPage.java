@@ -1,4 +1,4 @@
-package no.teigmeland;
+package no.teigmeland.familiehub.wicket.page.oppgaveliste;
 
 import org.apache.wicket.markup.html.WebPage;
 

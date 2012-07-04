@@ -21,7 +21,7 @@
 		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
 		<init-param>
 			<param-name>applicationClassName</param-name>
-			<param-value>no.teigmeland.WicketApplication</param-value>
+			<param-value>no.teigmeland.familiehub.wicket.WicketApplication</param-value>
 		</init-param>
 	</filter>
 

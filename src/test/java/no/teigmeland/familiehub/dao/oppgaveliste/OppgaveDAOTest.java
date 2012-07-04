@@ -1,5 +1,7 @@
-package no.teigmeland;
+package no.teigmeland.familiehub.dao.oppgaveliste;
 
+import no.teigmeland.familiehub.domene.oppgaveliste.Oppgave;
+import no.teigmeland.familiehub.dao.oppgaveliste.OppgaveDAO;
 import org.junit.Test;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
