@@ -5,13 +5,8 @@
     <artifactId>familiehub</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <!-- TODO project name  -->
-    <name>quickstart</name>
-    <description></description>
-    <!--
-      TODO <organization> <name>company name</name> <url>company url</url>
-      </organization>
-    -->
+    <name>FamilieHub</name>
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -36,14 +31,6 @@
             <artifactId>spring-jdbc</artifactId>
             <version>3.1.1.RELEASE</version>
         </dependency>
-        <!-- OPTIONAL DEPENDENCY
-        <dependency>
-          <groupId>org.apache.wicket</groupId>
-          <artifactId>wicket-extensions</artifactId>
-          <version>${wicket.version}</version>
-        </dependency>
-        -->
-
         <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
