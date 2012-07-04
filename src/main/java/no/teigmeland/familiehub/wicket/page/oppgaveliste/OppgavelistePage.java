@@ -20,9 +20,10 @@ public class OppgavelistePage extends WebPage {
 
         oppgavelisteTjeneste = WicketApplication.get().getOppgavelisteTjeneste();
 
-            add(createTodoListView(oppgavelisteTjeneste.hentOppgaveliste()));
+        add(createTodoListView(oppgavelisteTjeneste.hentOppgaveliste()));
     }
 
+    //TODO Ønsker å endre navn fra todo til oppgave eller lignende
     private ListView createTodoListView(final List<Oppgave> todoListe) {
         return new ListView("todoListView", todoListe) {
             @Override
