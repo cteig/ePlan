@@ -7,7 +7,7 @@ import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 import javax.sql.DataSource;
 import java.util.List;
 
-public class TodoTjeneste {
+public class OppgavelisteTjeneste {
 
     DataSource source = new SingleConnectionDataSource(
             "jdbc:postgresql://localhost/familiehub",
