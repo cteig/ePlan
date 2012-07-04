@@ -32,4 +32,10 @@ public class OppgaveDAO {
         return oppgaver;
     }
 
+    public void leggTilOppgave(Oppgave oppgave) {
+        String query = "INSERT INTO oppgave(id, kort_beskrivelse, lang_beskrivelse) values (?,?,?)";
+
+        jdbcTemplate.update(query, oppgave.getId(), oppgave.getKortBeskrivelse(), oppgave.getLangBeskrivelse());
+
+    }
 }

@@ -30,7 +30,6 @@ public class OppgaveDAOTest {
         DataFileLoader loader = new FlatXmlDataFileLoader();
 
         String dataSetFilename = "/" + this.getClass().getCanonicalName().replaceAll("\\.", "/") + ".xml";
-        System.out.println("canonicalName = " + dataSetFilename);
 
         IDataSet dataSet = loader.load(dataSetFilename);
 
@@ -59,6 +58,26 @@ public class OppgaveDAOTest {
 
         // assert
         assertEquals(1, oppgaveList.size());
+
+    }
+
+    @Test
+    public void leggTilOppgave() throws Exception {
+        // arrange
+        DataSource source = new SingleConnectionDataSource(
+                "jdbc:postgresql://localhost/familiehub",
+                "familiehub", "hemmelig", true);
+        OppgaveDAO oppgaveDAO = new OppgaveDAO(source);
+        List<Oppgave> oppgaveList = oppgaveDAO.hentAlleOppgaver();
+        int oppgavelistLengdeFør = oppgaveList.size();
+
+        // act
+        oppgaveDAO.leggTilOppgave(new Oppgave(2, "fisk", "laks"));
+        List<Oppgave> oppgaveListEtter = oppgaveDAO.hentAlleOppgaver();
+        int oppgavelistLengdeEtter = oppgaveListEtter.size();
+
+        // assert
+        assertEquals(oppgavelistLengdeFør + 1, oppgavelistLengdeEtter);
 
     }
 }

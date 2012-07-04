@@ -1,6 +1,8 @@
 package no.teigmeland.familiehub.domene.oppgaveliste;
 
 public class Oppgave {
+
+
     private int id;
 
     private String kortBeskrivelse;
@@ -14,8 +16,16 @@ public class Oppgave {
         this.langBeskrivelse = langBeskrivelse;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getKortBeskrivelse() {
         return kortBeskrivelse;
+    }
+
+    public String getLangBeskrivelse() {
+        return langBeskrivelse;
     }
 
 }
