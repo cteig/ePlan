@@ -1,0 +1,18 @@
+<!ELEMENT dataset (
+    changelog*,
+    oppgave*)>
+
+<!ELEMENT changelog EMPTY>
+<!ATTLIST changelog
+    id CDATA #REQUIRED
+    applied_at CDATA #REQUIRED
+    description CDATA #REQUIRED
+>
+
+<!ELEMENT oppgave EMPTY>
+<!ATTLIST oppgave
+    id CDATA #REQUIRED
+    kort_beskrivelse CDATA #REQUIRED
+    lang_beskrivelse CDATA #IMPLIED
+>
+
