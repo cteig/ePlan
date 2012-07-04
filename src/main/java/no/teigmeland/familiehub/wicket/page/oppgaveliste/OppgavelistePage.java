@@ -11,11 +11,11 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 import java.util.List;
 
-public class ListTodoPage extends WebPage {
+public class OppgavelistePage extends WebPage {
 
     public OppgavelisteTjeneste oppgavelisteTjeneste;
 
-    public ListTodoPage(PageParameters parameters) {
+    public OppgavelistePage(PageParameters parameters) {
         super(parameters);
 
         oppgavelisteTjeneste = WicketApplication.get().getOppgavelisteTjeneste();
