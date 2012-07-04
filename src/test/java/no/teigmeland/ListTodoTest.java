@@ -17,7 +17,7 @@ public class ListTodoTest {
         WebDriver driver = new HtmlUnitDriver();
 
         // And now use this to visit Google
-        driver.get("http://localhost:8080/todo/list");
+        driver.get("http://localhost:8080/oppgaveliste/vis");
 
         // Find the text input element by its name
         List<WebElement> elements = driver.findElements(By.tagName("li"));

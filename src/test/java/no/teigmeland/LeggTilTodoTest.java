@@ -14,7 +14,7 @@ public class LeggTilTodoTest {
         WebDriver driver = new HtmlUnitDriver();
 
         // And now use this to visit Google
-        driver.get("http://localhost:8080/todo/leggtil");
+        driver.get("http://localhost:8080/oppgaveliste/leggtil");
 
         // Find the text input element by its name
         WebElement element = driver.findElement(By.id("todo"));
@@ -23,7 +23,7 @@ public class LeggTilTodoTest {
 
         element.submit();
 
-        Assert.assertEquals("http://localhost:8080/todo/list",driver.getCurrentUrl());
+        Assert.assertEquals("http://localhost:8080/oppgaveliste/vis",driver.getCurrentUrl());
 
     }
 }

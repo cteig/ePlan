@@ -30,8 +30,8 @@ public class WicketApplication extends WebApplication {
 
         // add your configuration here
 
-        mountPage("todo/list", OppgavelistePage.class);
-        mountPage("todo/leggtil", LeggTilOppgavePage.class);
+        mountPage("oppgaveliste/vis", OppgavelistePage.class);
+        mountPage("oppgaveliste/leggtil", LeggTilOppgavePage.class);
 
         oppgavelisteTjeneste = new OppgavelisteTjeneste();
     }
