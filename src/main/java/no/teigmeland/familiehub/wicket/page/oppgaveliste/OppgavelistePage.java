@@ -20,7 +20,7 @@ public class OppgavelistePage extends WebPage {
 
         oppgavelisteTjeneste = WicketApplication.get().getOppgavelisteTjeneste();
 
-            add(createTodoListView(oppgavelisteTjeneste.hentTodoListe()));
+            add(createTodoListView(oppgavelisteTjeneste.hentOppgaveliste()));
     }
 
     private ListView createTodoListView(final List<Oppgave> todoListe) {

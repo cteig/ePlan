@@ -14,7 +14,7 @@ public class OppgavelisteTjeneste {
             "familiehub", "hemmelig", true);
     OppgaveDAO oppgaveDAO = new OppgaveDAO(source);
 
-    public List<Oppgave> hentTodoListe() {
+    public List<Oppgave> hentOppgaveliste() {
         return oppgaveDAO.hentAlleOppgaver();
     }
 }
