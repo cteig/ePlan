@@ -1,7 +1,13 @@
 package no.teigmeland.familiehub.dao.oppgaveliste;
 
 import no.teigmeland.familiehub.domene.oppgaveliste.Oppgave;
-import no.teigmeland.familiehub.dao.oppgaveliste.OppgaveDAO;
+import org.dbunit.JdbcDatabaseTester;
+import org.dbunit.dataset.IDataSet;
+import org.dbunit.operation.DatabaseOperation;
+import org.dbunit.util.fileloader.DataFileLoader;
+import org.dbunit.util.fileloader.FlatXmlDataFileLoader;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
@@ -12,6 +18,33 @@ import java.util.List;
 import static junit.framework.Assert.assertEquals;
 
 public class OppgaveDAOTest {
+
+    private JdbcDatabaseTester databaseTester;
+
+    @Before
+    public void setUp() throws Exception {
+        databaseTester = new JdbcDatabaseTester("org.postgresql.Driver",
+                "jdbc:postgresql://localhost/familiehub", "familiehub", "hemmelig");
+
+        // initialize your dataset here
+        DataFileLoader loader = new FlatXmlDataFileLoader();
+
+        String dataSetFilename = "/" + this.getClass().getCanonicalName().replaceAll("\\.", "/") + ".xml";
+        System.out.println("canonicalName = " + dataSetFilename);
+
+        IDataSet dataSet = loader.load(dataSetFilename);
+
+        databaseTester.setDataSet(dataSet);
+        databaseTester.setSetUpOperation(DatabaseOperation.CLEAN_INSERT);
+
+        databaseTester.onSetup();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        databaseTester.setTearDownOperation(DatabaseOperation.NONE);
+        databaseTester.onTearDown();
+    }
 
     @Test
     public void hentAlleOppgaver() throws Exception {
