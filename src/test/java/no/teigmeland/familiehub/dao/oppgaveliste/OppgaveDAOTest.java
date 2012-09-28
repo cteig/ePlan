@@ -69,7 +69,7 @@ public class OppgaveDAOTest {
                 "familiehub", "hemmelig", true);
         OppgaveDAO oppgaveDAO = new OppgaveDAO(source);
         List<Oppgave> oppgaveList = oppgaveDAO.hentAlleOppgaver();
-        int oppgavelistLengdeFør = oppgaveList.size();
+        int oppgavelistLengdeFÃ¸r = oppgaveList.size();
 
         // act
         oppgaveDAO.leggTilOppgave(new Oppgave(2, "fisk", "laks"));
@@ -77,7 +77,7 @@ public class OppgaveDAOTest {
         int oppgavelistLengdeEtter = oppgaveListEtter.size();
 
         // assert
-        assertEquals(oppgavelistLengdeFør + 1, oppgavelistLengdeEtter);
+        assertEquals(oppgavelistLengdeFÃ¸r + 1, oppgavelistLengdeEtter);
 
     }
 }
