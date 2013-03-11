@@ -1,9 +1,11 @@
 package no.teigmeland.familiehub.wicket;
 
 import no.teigmeland.familiehub.tjeneste.oppgaveliste.OppgavelisteTjeneste;
+import no.teigmeland.familiehub.tjeneste.pakkeliste.PakkelisteTjeneste;
 import no.teigmeland.familiehub.wicket.page.oppgaveliste.HomePage;
 import no.teigmeland.familiehub.wicket.page.oppgaveliste.LeggTilOppgavePage;
 import no.teigmeland.familiehub.wicket.page.oppgaveliste.OppgavelistePage;
+import no.teigmeland.familiehub.wicket.page.pakkeliste.PakkelistePage;
 import org.apache.wicket.protocol.http.WebApplication;
 
 /**
@@ -12,6 +14,7 @@ import org.apache.wicket.protocol.http.WebApplication;
 public class WicketApplication extends WebApplication {
 
     private OppgavelisteTjeneste oppgavelisteTjeneste;
+    private PakkelisteTjeneste pakkelisteTjeneste;
 
     /**
      * @see org.apache.wicket.Application#getHomePage()
@@ -32,8 +35,10 @@ public class WicketApplication extends WebApplication {
 
         mountPage("oppgaveliste/vis", OppgavelistePage.class);
         mountPage("oppgaveliste/leggtil", LeggTilOppgavePage.class);
+        mountPage("oppgaveliste/pakkeliste", PakkelistePage.class);
 
         oppgavelisteTjeneste = new OppgavelisteTjeneste();
+        pakkelisteTjeneste = new PakkelisteTjeneste();
     }
 
     public static WicketApplication get() {
@@ -42,5 +47,10 @@ public class WicketApplication extends WebApplication {
 
     public OppgavelisteTjeneste getOppgavelisteTjeneste() {
         return oppgavelisteTjeneste;
+   }
+
+    public PakkelisteTjeneste getPakkelisteTjeneste() {
+        return pakkelisteTjeneste;
     }
 }
+
