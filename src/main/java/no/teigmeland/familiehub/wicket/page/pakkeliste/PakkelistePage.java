@@ -24,7 +24,7 @@ public class PakkelistePage extends WebPage{
 
         pakkelisteTjeneste = WicketApplication.get().getPakkelisteTjeneste();
 
-        add(createPakkelisteView(pakkelisteTjeneste.hentPakkeliste()));
+        add(createPakkelisteView(pakkelisteTjeneste.hentAllePakkelisteItem()));
     }
 
     private ListView createPakkelisteView(final List<PakkelisteItem> pakkeliste) {

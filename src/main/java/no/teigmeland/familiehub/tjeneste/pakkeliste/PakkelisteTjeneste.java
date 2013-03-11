@@ -16,6 +16,7 @@ import java.util.List;
 public class PakkelisteTjeneste {
 
     DataSource source = new SingleConnectionDataSource(
+            "org.postgresql.Driver",
             "jdbc:postgresql://localhost/familiehub",
             "familiehub", "hemmelig", true);
     PakkelisteDAO pakkelisteDAO= new PakkelisteDAO(source);
