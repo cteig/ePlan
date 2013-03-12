@@ -1,5 +1,6 @@
 package no.teigmeland.eplan.wicket.page.pakkeliste;
 
+import no.teigmeland.eplan.domene.pakkeliste.Pakkeliste;
 import no.teigmeland.eplan.domene.pakkeliste.PakkelisteLinje;
 import no.teigmeland.eplan.tjeneste.pakkeliste.PakkelisteTjeneste;
 import no.teigmeland.eplan.wicket.WicketApplication;
@@ -23,16 +24,17 @@ public class PakkelistePage extends WebPage{
 
         pakkelisteTjeneste = WicketApplication.get().getPakkelisteTjeneste();
 
-        add(createPakkelisteView(pakkelisteTjeneste.hentAllePakkelisteItem()));
+//        add(createPakkelisteView(pakkelisteTjeneste.hentAllePakkelisteLinjer()));
+        add(createPakkelisteView(pakkelisteTjeneste.hentAllePakkelister()));
     }
 
-    private ListView createPakkelisteView(final List<PakkelisteLinje> pakkeliste) {
+    private ListView createPakkelisteView(final List<Pakkeliste> pakkeliste) {
         return new ListView("pakkelisteView", pakkeliste) {
             @Override
             protected void populateItem(ListItem listItem) {
-                PakkelisteLinje pakkelsiteTekst = (PakkelisteLinje) listItem.getModelObject();
+                Pakkeliste pakkelisteTekst = (Pakkeliste) listItem.getModelObject();
 
-                listItem.add(new Label("pakkelisteLinje", pakkelsiteTekst.getKortBeskrivelse()));
+                listItem.add(new Label("pakkelisteLinje", pakkelisteTekst.getPakkelistenavn()));
             }
         };
     }
