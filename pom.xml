@@ -121,21 +121,6 @@
         </testResources>
         <plugins>
             <plugin>
-                <groupId>org.mybatis.maven</groupId>
-                <artifactId>maven-migration-plugin</artifactId>
-                <version>1.0.0</version>
-                <configuration>
-                    <repository>src/main/sql</repository>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>postgresql</groupId>
-                        <artifactId>postgresql</artifactId>
-                        <version>9.1-901.jdbc4</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <version>2.0.5</version>
