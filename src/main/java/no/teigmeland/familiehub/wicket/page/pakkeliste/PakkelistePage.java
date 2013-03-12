@@ -9,7 +9,6 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**

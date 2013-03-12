@@ -3,7 +3,6 @@ package no.teigmeland.familiehub.dao.pakkeliste;
 import no.teigmeland.familiehub.domene.pakkeliste.PakkelisteItem;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

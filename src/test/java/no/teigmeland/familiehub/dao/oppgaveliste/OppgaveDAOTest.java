@@ -12,7 +12,6 @@ import org.junit.Test;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
 import javax.sql.DataSource;
-
 import java.util.List;
 
 import static junit.framework.Assert.assertEquals;

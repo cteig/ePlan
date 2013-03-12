@@ -1,13 +1,11 @@
 package no.teigmeland.familiehub.tjeneste.pakkeliste;
 
-import no.teigmeland.familiehub.dao.oppgaveliste.OppgaveDAO;
 import no.teigmeland.familiehub.dao.pakkeliste.PakkelisteDAO;
 import no.teigmeland.familiehub.dao.pakkeliste.PakkelisteDAOMock;
 import no.teigmeland.familiehub.domene.pakkeliste.PakkelisteItem;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
 import javax.sql.DataSource;
-import java.util.Arrays;
 import java.util.List;
 
 /**
