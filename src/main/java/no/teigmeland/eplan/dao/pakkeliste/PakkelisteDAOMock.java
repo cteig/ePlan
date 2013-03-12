@@ -1,6 +1,6 @@
 package no.teigmeland.eplan.dao.pakkeliste;
 
-import no.teigmeland.eplan.domene.pakkeliste.PakkelisteItem;
+import no.teigmeland.eplan.domene.pakkeliste.PakkelisteLinje;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,20 +9,20 @@ import java.util.List;
  * Christine Teig
  */
 public class PakkelisteDAOMock {
-    public List<PakkelisteItem> hentAllePakkeItem() {
+    public List<PakkelisteLinje> hentAllePakkeItem() {
 
-        List<PakkelisteItem> pakkeliste = new ArrayList<PakkelisteItem>();
+        List<PakkelisteLinje> pakkeliste = new ArrayList<PakkelisteLinje>();
 
-        PakkelisteItem pakkelisteItem1 = new PakkelisteItem(1, "sokker", "sokker");
-        PakkelisteItem pakkelisteItem2 = new PakkelisteItem(1, "bukser", "bukser");
-        PakkelisteItem pakkelisteItem3 = new PakkelisteItem(1, "genser", "genser");
-        PakkelisteItem pakkelisteItem4 = new PakkelisteItem(1, "jakke", "jakke");
-        PakkelisteItem pakkelisteItem5 = new PakkelisteItem(1, "lue", "lue");
-        pakkeliste.add(pakkelisteItem1);
-        pakkeliste.add(pakkelisteItem2);
-        pakkeliste.add(pakkelisteItem3);
-        pakkeliste.add(pakkelisteItem4);
-        pakkeliste.add(pakkelisteItem5);
+        PakkelisteLinje pakkelisteLinje1 = new PakkelisteLinje(1, "sokker", "sokker");
+        PakkelisteLinje pakkelisteLinje2 = new PakkelisteLinje(1, "bukser", "bukser");
+        PakkelisteLinje pakkelisteLinje3 = new PakkelisteLinje(1, "genser", "genser");
+        PakkelisteLinje pakkelisteLinje4 = new PakkelisteLinje(1, "jakke", "jakke");
+        PakkelisteLinje pakkelisteLinje5 = new PakkelisteLinje(1, "lue", "lue");
+        pakkeliste.add(pakkelisteLinje1);
+        pakkeliste.add(pakkelisteLinje2);
+        pakkeliste.add(pakkelisteLinje3);
+        pakkeliste.add(pakkelisteLinje4);
+        pakkeliste.add(pakkelisteLinje5);
 
         return pakkeliste;
     }

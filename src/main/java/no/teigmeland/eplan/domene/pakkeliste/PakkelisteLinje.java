@@ -3,7 +3,7 @@ package no.teigmeland.eplan.domene.pakkeliste;
 /**
  * Christine Teig
  */
-public class PakkelisteItem {
+public class PakkelisteLinje {
 
     private int id;
 
@@ -11,7 +11,7 @@ public class PakkelisteItem {
     private String langBeskrivelse;
 
 
-    public PakkelisteItem(int id, String kortBeskrivelse, String langBeskrivelse) {
+    public PakkelisteLinje(int id, String kortBeskrivelse, String langBeskrivelse) {
 
 
         this.id = id;

@@ -2,7 +2,7 @@ package no.teigmeland.eplan.tjeneste.pakkeliste;
 
 import no.teigmeland.eplan.dao.pakkeliste.PakkelisteDAO;
 import no.teigmeland.eplan.dao.pakkeliste.PakkelisteDAOMock;
-import no.teigmeland.eplan.domene.pakkeliste.PakkelisteItem;
+import no.teigmeland.eplan.domene.pakkeliste.PakkelisteLinje;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
 import javax.sql.DataSource;
@@ -19,11 +19,11 @@ public class PakkelisteTjeneste {
             "familiehub", "hemmelig", true);
     PakkelisteDAO pakkelisteDAO= new PakkelisteDAO(source);
 
-    public List<PakkelisteItem> hentPakkeliste() {
+    public List<PakkelisteLinje> hentPakkeliste() {
         PakkelisteDAOMock pakkelisteDAOMock = new PakkelisteDAOMock();
         return pakkelisteDAOMock.hentAllePakkeItem();
     }
-    public List<PakkelisteItem> hentAllePakkelisteItem() {
+    public List<PakkelisteLinje> hentAllePakkelisteItem() {
         return pakkelisteDAO.hentAllePakkelisteItem();
     }
 

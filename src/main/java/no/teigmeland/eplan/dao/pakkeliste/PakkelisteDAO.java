@@ -1,6 +1,6 @@
 package no.teigmeland.eplan.dao.pakkeliste;
 
-import no.teigmeland.eplan.domene.pakkeliste.PakkelisteItem;
+import no.teigmeland.eplan.domene.pakkeliste.PakkelisteLinje;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -19,23 +19,23 @@ public class PakkelisteDAO {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    public List<PakkelisteItem> hentAllePakkelisteItem() {
+    public List<PakkelisteLinje> hentAllePakkelisteItem() {
         String query = "SELECT * FROM pakkelistelinje";
 
-        List<PakkelisteItem> pakkelisteItemList = jdbcTemplate.query(query, new RowMapper<PakkelisteItem>() {
+        List<PakkelisteLinje> pakkelisteLinjeList = jdbcTemplate.query(query, new RowMapper<PakkelisteLinje>() {
             @Override
-            public PakkelisteItem mapRow(ResultSet rs, int rowNum) throws SQLException {
-                return new PakkelisteItem(rs.getInt("id"), rs.getString("kort_beskrivelse"), rs.getString("lang_beskrivelse"));
+            public PakkelisteLinje mapRow(ResultSet rs, int rowNum) throws SQLException {
+                return new PakkelisteLinje(rs.getInt("id"), rs.getString("kort_beskrivelse"), rs.getString("lang_beskrivelse"));
             }
         });
 
-        return pakkelisteItemList;
+        return pakkelisteLinjeList;
     }
 
-    public void leggTilPakkelisteItem(PakkelisteItem pakkelisteItem) {
+    public void leggTilPakkelisteItem(PakkelisteLinje pakkelisteLinje) {
         String query = "INSERT INTO pakkelistelinje(id, kort_beskrivelse, lang_beskrivelse) values (?,?,?)";
 
-        jdbcTemplate.update(query, pakkelisteItem.getId(), pakkelisteItem.getKortBeskrivelse(), pakkelisteItem.getLangBeskrivelse());
+        jdbcTemplate.update(query, pakkelisteLinje.getId(), pakkelisteLinje.getKortBeskrivelse(), pakkelisteLinje.getLangBeskrivelse());
 
     }
 }
